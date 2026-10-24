@@ -1,4 +1,4 @@
-require('dotenv').config(); // 👈 LÍNEA 1: Carga las variables del .env antes que todo
+require('dotenv').config();
 
 const express = require('express');
 const { getConnection } = require('./config/db');
@@ -6,15 +6,16 @@ const { getConnection } = require('./config/db');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Probar la conexión a la base de datos
+// Conectar a la Base de Datos
 getConnection();
 
-// Ruta de prueba inicial
-app.get('/', (req, res) => {
-  res.send('API Películas IUDigital funcionando correctamente');
-});
+// Middleware para leer datos JSON en las peticiones HTTP
+app.use(express.json());
 
-// Arrancar el servidor
+// Declaración de Rutas de la API
+app.use('/api/genero', require('./routes/generoRoute'));
+
+// Servidor escuchando
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
 });
