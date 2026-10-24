@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/FerneyEcheverri/api-peliculas-iudigital/issues"
   },
-  "homepage": "https://github.com/FerneyEcheverri/api-peliculas-iudigital#readme"
+  "homepage": "https://github.com/FerneyEcheverri/api-peliculas-iudigital#readme",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4"
+  }
 }
