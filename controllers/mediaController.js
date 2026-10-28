@@ -3,12 +3,8 @@ const Media = require('../models/Media');
 const Genero = require('../models/Genero');
 const Tipo = require('../models/Tipo');
 
-<<<<<<< HEAD
-
-=======
 // Los modelos de Director y Productora se incorporarán desde las ramas de los compañeros.
 // Consultamos sus colecciones sin sobrescribir ni duplicar sus implementaciones.
->>>>>>> origin/main
 const RELACIONES = [
   { campo: 'genero', coleccion: 'generos', modelo: Genero, activo: true },
   { campo: 'director', coleccion: 'directors', activo: true },
