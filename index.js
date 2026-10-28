@@ -15,7 +15,7 @@ app.use(express.json());
 // Declaración de Rutas de la API
 app.use('/api/genero', require('./routes/generoRoute'));
 app.use('/api/tipo', require('./routes/tipoRoute'));
-
+app.use('/api/director', require('./routes/directorRoute'));
 // Servidor escuchando
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
