@@ -16,6 +16,8 @@ app.use(express.json());
 app.use('/api/genero', require('./routes/generoRoute'));
 app.use('/api/tipo', require('./routes/tipoRoute'));
 app.use('/api/director', require('./routes/directorRoute'));
+app.use('/api/productora', require('./routes/productoraRoute'));
+
 // Servidor escuchando
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
