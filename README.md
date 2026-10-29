@@ -1,9 +1,9 @@
 # Evidencia de Aprendizaje 1: API REST - Módulo 2 (Director)
 
-**Institución:** Institución Universitaria Digital de Antioquia 
-**Asignatura:** Proyecto Integrador II / Ingeniería Web II
-**Módulo asignado:** Módulo 2 - Director 
-**Tecnologías:** Node.js, Express, MongoDB Atlas, Mongoose
+* **Institución:** Institución Universitaria Digital de Antioquia 
+* **Asignatura:** Proyecto Integrador II / Ingeniería Web II
+* **Módulo asignado:** Módulo 2 - Director 
+* **Tecnologías:** Node.js, Express, MongoDB Atlas, Mongoose
 
 ---
 
