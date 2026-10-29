@@ -1,9 +1,15 @@
 const { Router } = require('express');
-const { crearDirector } = require('../controllers/directorController');
+const { getDirectores, createDirector, updateDirector } = require('../controllers/directorController');
 
 const router = Router();
 
-// Ruta para crear un director
-router.post('/', crearDirector);
+// Obtener todos los directores (GET)
+router.get('/', getDirectores);
+
+// Crear un nuevo director (POST)
+router.post('/', createDirector);
+
+// Actualizar un director por ID (PUT)
+router.put('/:id', updateDirector);
 
 module.exports = router;
