@@ -32,10 +32,12 @@ Proyecto-EA1/
 ├── .env.template               # Plantilla de variables de entorno
 ├── .gitignore                  # Archivos excluidos del control de versiones
 └── index.js                    # Punto de entrada del servidor Express
-
+```
+---
 ## Rutas y Métodos HTTP (/api/director)
-Método,Ruta,Descripción,Código Respuesta
-GET,/api/director,Retorna la lista de todos los directores registrados,200 OK
-POST,/api/director,Crea un nuevo director en la base de datos,201 Created
-PUT,/api/director/:id,Actualiza un director existente buscando por su _id,200 OK
+| Método | Ruta | Descripción | Código Respuesta |
+| :--- | :--- | :--- | :--- |
+| **GET** | `/api/director` | Retorna la lista de todos los directores registrados | `200 OK` |
+| **POST** | `/api/director` | Crea un nuevo director en la base de datos | `201 Created` |
+| **PUT** | `/api/director/:id` | Actualiza un director existente buscando por su `_id` | `200 OK` |
 
