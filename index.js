@@ -2,6 +2,9 @@ require('dotenv').config();
 
 const express = require('express');
 const { getConnection } = require('./config/db');
+const dns = require('dns');
+
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,16 +17,15 @@ app.use(express.json());
 
 // Declaración de Rutas de la API
 app.use('/api/genero', require('./routes/generoRoute'));
+app.use('/api/tipo', require('./routes/tipoRoute'));
 
 
 // Importar el archivo de rutas de productora
 const productoraRoute = require('./routes/productoraRoute');
 
-// Registrar el middleware para parsear JSON (debe ir ANTES de las rutas)
-app.use(express.json());
+
 
 // Enlazar la ruta con el prefijo /api/productora
-app.use('/api/genero', require('./routes/generoRoute'));
 app.use('/api/productora', productoraRoute); 
 
 // Servidor escuchando
