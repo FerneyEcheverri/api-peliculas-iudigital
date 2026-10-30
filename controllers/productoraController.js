@@ -40,7 +40,8 @@ const createProductora = async (req = request, res = response) => {
     }
 };
 
-// PUT: Actualizar productora por ID
+
+// PUT: Actualizar una productora por ID
 const updateProductora = async (req = request, res = response) => {
     try {
         const { id } = req.params;
@@ -59,7 +60,9 @@ const updateProductora = async (req = request, res = response) => {
             fechaActualizacion: new Date()
         };
 
-        productora = await Productora.findByIdAndUpdate(id, data, { new: true });
+        // 'returnDocument: after' le indica a Mongoose que devuelva el objeto YA actualizado
+        productora = await Productora.findByIdAndUpdate(id, data, { returnDocument: 'after' });
+        
         return res.status(200).json(productora);
     } catch (error) {
         console.error(error);
