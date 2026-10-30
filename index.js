@@ -15,6 +15,8 @@ app.use(express.json());
 // Declaración de Rutas de la API
 app.use('/api/genero', require('./routes/generoRoute'));
 app.use('/api/tipo', require('./routes/tipoRoute'));
+app.use('/api/director', require('./routes/directorRoute'));
+app.use('/api/productora', require('./routes/productoraRoute'));
 
 // Servidor escuchando
 app.listen(port, () => {
