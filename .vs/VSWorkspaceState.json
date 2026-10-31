@@ -3,15 +3,9 @@
     "",
     "\\config",
     "\\controllers",
-<<<<<<< HEAD
     "\\models",
     "\\routes"
   ],
-  "SelectedNode": "\\index.js",
-=======
-    "\\models"
-  ],
-  "SelectedNode": "\\controllers\\generoController.js",
->>>>>>> origin/main
+  "SelectedNode": "\\controllers\\tipoController.js",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,52 @@
+$kind: http-example
+request:
+  url: http://localhost:3000/api/media
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "761"
+    ETag: W/"2f9-at1BMa9qRe5KQunrj0D5b9lLnf0"
+    Date: Sat, 31 Oct 2026 16:20:00 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "_id": "6ae6139646887f7552a4b9d5",
+          "serial": "PRUEBA-M5-001",
+          "titulo": "Interestelar",
+          "sinopsis": "Un grupo de astronautas viaja a través del espacio en busca de un nuevo hogar para la humanidad.",
+          "urlPelicula": "https://ejemplo.com/interestelar-prueba",
+          "imagenPortada": "https://ejemplo.com/interestelar.jpg",
+          "anioEstreno": 2014,
+          "genero": {
+            "_id": "6adc0349bcb8f287993ba637",
+            "estado": "Activo",
+            "nombre": "Acción"
+          },
+          "director": {
+            "_id": "6ae413d14f0126953154eeab",
+            "nombres": "Christopher Nolan",
+            "estado": "Activo"
+          },
+          "productora": {
+            "_id": "6ae3e02bb42d7f3ca08510fc",
+            "nombre": "Warner Bros Pictures",
+            "estado": "Activo"
+          },
+          "tipo": {
+            "_id": "6ae0194d0a5c949dd3bed029",
+            "nombre": "Película"
+          },
+          "fechaCreacion": "2026-10-31T16:13:10.160Z",
+          "fechaActualizacion": "2026-10-31T16:13:10.160Z",
+          "__v": 0
+        }
+      ]
+order: 1000

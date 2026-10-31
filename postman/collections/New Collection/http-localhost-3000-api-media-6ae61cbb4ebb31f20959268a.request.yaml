@@ -1,0 +1,6 @@
+$kind: http-request
+name: http://localhost:3000/api/media/6ae61cbb4ebb31f20959268a
+description: ""
+url: http://localhost:3000/api/media/6ae61cbb4ebb31f20959268a
+method: DELETE
+order: 4000

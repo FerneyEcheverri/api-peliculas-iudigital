@@ -1,0 +1,18 @@
+$kind: http-request
+url: http://localhost:3000/api/media/6ae6139646887f7552a4b9d5
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"titulo\": \"Interestelar - Versión Actualizada\",\r
+
+    \  \"sinopsis\": \"Película de ciencia ficción dirigida por Christopher Nolan. Información actualizada mediante el método PUT de la API REST.\",\r
+
+    \  \"anioEstreno\": 2015\r
+
+    }"
+auth:
+  type: noauth
+examples: .resources/Put ubdate media.resources/examples
+order: 3000

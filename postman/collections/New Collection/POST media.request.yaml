@@ -1,0 +1,46 @@
+$kind: http-request
+url: http://localhost:3000/api/media
+method: POST
+body:
+  type: json
+  content: |-
+    /*{
+      "serial": "PRUEBA-M5-001",
+      "titulo": "Interestelar",
+      "sinopsis": "Un grupo de astronautas viaja a través del espacio en busca de un nuevo hogar para la humanidad.",
+      "urlPelicula": "https://ejemplo.com/interestelar-prueba",
+      "imagenPortada": "https://ejemplo.com/interestelar.jpg",
+      "anioEstreno": 2014,
+      "genero": "6adc0349bcb8f287993ba637",
+      "director": "6ae413d14f0126953154eeeb",
+      "productora": "6ae3e02bb42d7f3ca08510fc",
+      "tipo": "6ae0194d0a5c949dd3bed029"
+    }*/
+
+    {
+      "serial": "PRUEBA-M5-002",
+      "titulo": "Viaje al Centro de la tierra",
+      "sinopsis": "Aventuras al interior de la tierra y misteriosas islas.",
+      "urlPelicula": "https://ejemplo.com/viajecentrotierra-prueba",
+      "imagenPortada": "https://ejemplo.com/viajecentro.jpg",
+      "anioEstreno": 2017,
+      "genero": "6adc0349bcb8f287993ba637",
+      "director": "6ae413d14f0126953154eeab",
+      "productora": "6ae3e02bb42d7f3ca08510fc",
+      "tipo": "6ae0194d0a5c949dd3bed029"
+    }
+auth:
+  type: noauth
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 400", function () {
+          pm.response.to.have.status(400);
+      });
+
+      pm.test("Response body contains error message", function () {
+          var jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("mensaje");
+          pm.expect(jsonData.mensaje).to.eql("El registro de director no existe");
+      });
+order: 2000

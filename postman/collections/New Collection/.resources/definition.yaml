@@ -1,0 +1,9 @@
+$kind: collection
+scripts:
+  - type: http:beforeRequest
+    code: "\thttp://localhost:3000/api/generos"
+    language: text/javascript
+auth:
+  - id: 7e59b062-9168-41d4-88ed-06dddadf7fdc
+    type: bearer
+    name: Bearer Token
