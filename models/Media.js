@@ -19,4 +19,4 @@ MediaSchema.pre('save', function () {
   if (!this.isNew) this.fechaActualizacion = new Date();
 });
 
-module.exports = model('Media', MediaSchema);
+module.exports = model('Media', MediaSchema, 'medias');

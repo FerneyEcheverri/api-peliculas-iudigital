@@ -21,4 +21,4 @@ const DirectorSchema = Schema({
     }
 });
 
-module.exports = model('Director', DirectorSchema);
+module.exports = model('Director', DirectorSchema, 'directores');

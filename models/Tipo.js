@@ -22,4 +22,4 @@ const TipoSchema = Schema({
 });
 
 // OBLIGATORIO: Exportar directamente el modelo devuelto por model()
-module.exports = model('Tipo', TipoSchema);
+module.exports = model('Tipo', TipoSchema, 'tipos');

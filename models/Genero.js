@@ -27,4 +27,4 @@ const GeneroSchema = Schema({
   }
 });
 
-module.exports = model('Genero', GeneroSchema);
+module.exports = model('Genero', GeneroSchema, 'generos');
