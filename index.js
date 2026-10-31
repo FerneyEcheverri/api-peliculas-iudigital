@@ -15,23 +15,12 @@ getConnection();
 // Middleware para leer datos JSON en las peticiones HTTP
 app.use(express.json());
 
-// Declaración de Rutas de la API
+// Declaración de Rutas de la API (con el prefijo /api)
 app.use('/api/genero', require('./routes/generoRoute'));
-app.use('/api/tipo', require('./routes/tipoRoute'));
-
-
-
-// Importar el archivo de rutas de productora
-const productoraRoute = require('./routes/productoraRoute');
-
-
-
-// Enlazar la ruta con el prefijo /api/productora
-app.use('/api/productora', productoraRoute); 
-
 app.use('/api/director', require('./routes/directorRoute'));
 app.use('/api/productora', require('./routes/productoraRoute'));
-
+app.use('/api/tipo', require('./routes/tipoRoute'));
+app.use('/api/media', require('./routes/mediaRoute'));
 
 // Servidor escuchando
 app.listen(port, () => {
