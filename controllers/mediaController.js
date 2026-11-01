@@ -7,7 +7,7 @@ const Tipo = require('../models/Tipo');
 // Consultamos sus colecciones sin sobrescribir ni duplicar sus implementaciones.
 const RELACIONES = [
   { campo: 'genero', coleccion: 'generos', modelo: Genero, activo: true },
-  { campo: 'director', coleccion: 'directors', activo: true },
+  { campo: 'director', coleccion: 'directores', activo: true },
   { campo: 'productora', coleccion: 'productoras', activo: true },
   { campo: 'tipo', coleccion: 'tipos', modelo: Tipo, activo: false }
 ];
